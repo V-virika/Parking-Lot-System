@@ -1,4 +1,5 @@
 import heapq
+import sys
 
 
 class Car:
@@ -189,12 +190,13 @@ def run_program(lines):
 
 
 def main():
+    filename = sys.argv[1] if len(sys.argv) > 1 else "input.txt"
     try:
-        file = open("input.txt", "r", encoding="utf-8")
+        file = open(filename, "r", encoding="utf-8")
         lines = file.readlines()
         file.close()
     except OSError:
-        print("Could not open input.txt")
+        print("Could not open " + filename)
         return
 
     results = run_program(lines)
