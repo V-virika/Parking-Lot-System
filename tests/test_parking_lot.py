@@ -2,14 +2,10 @@ import os
 import sys
 import unittest
 
-# Support running tests from either project root or the tests folder
+# Ensure project root is in sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "parking_lot_system")))
 
-try:
-    from parking_lot_system.parking_lot import ParkingLot, run_program
-except ImportError:
-    from parking_lot import ParkingLot, run_program
+from parking_lot_system.parking_lot import ParkingLot, run_program
 
 
 class TestParkingLot(unittest.TestCase):
