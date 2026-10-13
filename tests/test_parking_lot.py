@@ -2,7 +2,6 @@ import os
 import sys
 import unittest
 
-# Ensure project root is in sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from parking_lot_system.parking_lot import ParkingLot, run_program
